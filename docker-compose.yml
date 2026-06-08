@@ -1,0 +1,28 @@
+# Reproducible local Exasol for anyone who wants to run this without a SaaS trial.
+# Exasol Community Edition (single-node) in Docker.
+#
+#   docker compose up -d        # wait ~1-2 min for the DB to become ready
+#
+# Then point .env.local at it:
+#   EXASOL_HOST=localhost
+#   EXASOL_PORT=8563
+#   EXASOL_USER=sys
+#   EXASOL_PASSWORD=exasol
+#   EXASOL_ENCRYPTION=true
+#   EXASOL_TLS_VERIFY=false      # CE uses a self-signed certificate
+#
+# ...and seed it:  npm run seed
+services:
+  exasol:
+    image: exasol/docker-db:latest
+    container_name: exasol-plantops
+    privileged: true # Exasol CE requires privileged mode
+    ports:
+      - "8563:8563" # SQL / WebSocket port
+      - "6583:6583" # BucketFS (optional)
+    volumes:
+      - exa-data:/exa
+    stop_grace_period: 120s
+
+volumes:
+  exa-data:

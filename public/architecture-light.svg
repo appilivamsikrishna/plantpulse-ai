@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 780" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" role="img" aria-label="Plant Ops Assistant — prototype request flow (sequence)">
+  <style>
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+    .hbox{fill:#ffffff;stroke:#d7ded8}
+    .htitle{fill:#16201a;font-weight:600}
+    .hsub{fill:#586259}
+    .life{stroke:#dfe4e0;stroke-width:1.4;stroke-dasharray:3 6}
+    .lbl{fill:#2c3730}
+    .step{opacity:.32}
+    .s1{animation:st1 14s infinite}.s2{animation:st2 14s infinite}.s3{animation:st3 14s infinite}
+    .s4{animation:st4 14s infinite}.s5{animation:st5 14s infinite}.s6{animation:st6 14s infinite}
+    .s7{animation:st7 14s infinite}.s8{animation:st8 14s infinite}.s9{animation:st9 14s infinite}
+    .s10{animation:st10 14s infinite}.s11{animation:st11 14s infinite}.s12{animation:st12 14s infinite}
+    @keyframes st1{0%{opacity:.32}2%,7%{opacity:1}9%,100%{opacity:.32}}
+    @keyframes st2{0%,7%{opacity:.32}9%,14%{opacity:1}16%,100%{opacity:.32}}
+    @keyframes st3{0%,15%{opacity:.32}17%,22%{opacity:1}24%,100%{opacity:.32}}
+    @keyframes st4{0%,22%{opacity:.32}24%,29%{opacity:1}31%,100%{opacity:.32}}
+    @keyframes st5{0%,30%{opacity:.32}32%,37%{opacity:1}39%,100%{opacity:.32}}
+    @keyframes st6{0%,37%{opacity:.32}39%,44%{opacity:1}46%,100%{opacity:.32}}
+    @keyframes st7{0%,45%{opacity:.32}47%,52%{opacity:1}54%,100%{opacity:.32}}
+    @keyframes st8{0%,52%{opacity:.32}54%,59%{opacity:1}61%,100%{opacity:.32}}
+    @keyframes st9{0%,60%{opacity:.32}62%,67%{opacity:1}69%,100%{opacity:.32}}
+    @keyframes st10{0%,67%{opacity:.32}69%,74%{opacity:1}76%,100%{opacity:.32}}
+    @keyframes st11{0%,75%{opacity:.32}77%,82%{opacity:1}84%,100%{opacity:.32}}
+    @keyframes st12{0%,82%{opacity:.32}84%,89%{opacity:1}91%,100%{opacity:.32}}
+  </style>
+  <defs>
+    <marker id="g" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2f9e1e"/></marker>
+    <marker id="b" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#0a86c0"/></marker>
+    <marker id="m" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#8a948c"/></marker>
+    <marker id="r" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#d23b34"/></marker>
+    <marker id="v" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#6f57d6"/></marker>
+  </defs>
+
+  <rect x="0" y="0" width="1100" height="780" fill="#f4f6f4" rx="14"/>
+  <text x="22" y="26" class="mono" font-size="11.5" letter-spacing="2" fill="#8a948c">PROTOTYPE · REQUEST FLOW (read top to bottom, the flow animates)</text>
+
+  <!-- lifelines -->
+  <line class="life" x1="100" y1="80" x2="100" y2="700"/>
+  <line class="life" x1="350" y1="80" x2="350" y2="700"/>
+  <line class="life" x1="575" y1="80" x2="575" y2="700"/>
+  <line class="life" x1="800" y1="80" x2="800" y2="700"/>
+  <line class="life" x1="1010" y1="80" x2="1010" y2="700"/>
+
+  <!-- headers -->
+  <rect class="hbox" x="28" y="34" width="144" height="44" rx="10"/>
+  <text x="100" y="52" text-anchor="middle" class="mono hsub" font-size="9.5" letter-spacing="1.5">CLIENT</text>
+  <text x="100" y="69" text-anchor="middle" class="htitle" font-size="13">Browser · UI</text>
+
+  <rect class="hbox" x="268" y="34" width="164" height="44" rx="10" stroke="#2f9e1e" stroke-opacity=".5"/>
+  <text x="350" y="52" text-anchor="middle" class="mono" font-size="9.5" letter-spacing="1.5" fill="#2f9e1e">OUR BACKEND</text>
+  <text x="350" y="69" text-anchor="middle" class="htitle" font-size="13">/api/ask · Vercel fn</text>
+
+  <rect class="hbox" x="497" y="34" width="156" height="44" rx="10" stroke="#6f57d6" stroke-opacity=".55"/>
+  <text x="575" y="52" text-anchor="middle" class="mono" font-size="9.5" letter-spacing="1.5" fill="#6f57d6">DATA STORE</text>
+  <text x="575" y="69" text-anchor="middle" class="htitle" font-size="13">DynamoDB</text>
+
+  <rect class="hbox" x="728" y="34" width="144" height="44" rx="10" stroke="#0a86c0" stroke-opacity=".5"/>
+  <text x="800" y="52" text-anchor="middle" class="mono" font-size="9.5" letter-spacing="1.5" fill="#0a86c0">ANTHROPIC</text>
+  <text x="800" y="69" text-anchor="middle" class="htitle" font-size="13">Claude API</text>
+
+  <rect class="hbox" x="938" y="34" width="144" height="44" rx="10" stroke="#2f9e1e" stroke-opacity=".5"/>
+  <text x="1010" y="52" text-anchor="middle" class="mono" font-size="9.5" letter-spacing="1.5" fill="#2f9e1e">EXASOL · AWS</text>
+  <text x="1010" y="69" text-anchor="middle" class="htitle" font-size="13">SQL views</text>
+
+  <!-- STEP 1: ask (authenticated) -->
+  <g class="step s1">
+    <line x1="100" y1="116" x2="346" y2="116" stroke="#2f9e1e" stroke-width="2" marker-end="url(#g)"/>
+    <text x="223" y="108" text-anchor="middle" class="lbl" font-size="11.5">ask a question (authenticated)</text>
+    <circle cx="100" cy="116" r="11" fill="#f4f6f4" stroke="#2f9e1e" stroke-width="2"/><text x="100" y="120" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#2f9e1e">1</text>
+  </g>
+  <!-- STEP 2: load history -->
+  <g class="step s2">
+    <line x1="350" y1="156" x2="571" y2="156" stroke="#6f57d6" stroke-width="2" marker-end="url(#v)"/>
+    <text x="462" y="148" text-anchor="middle" class="lbl" font-size="11.5">load recent history</text>
+    <circle cx="350" cy="156" r="11" fill="#f4f6f4" stroke="#6f57d6" stroke-width="2"/><text x="350" y="160" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#6f57d6">2</text>
+  </g>
+  <!-- STEP 3: save user message -->
+  <g class="step s3">
+    <line x1="350" y1="196" x2="571" y2="196" stroke="#6f57d6" stroke-width="2" marker-end="url(#v)"/>
+    <text x="462" y="188" text-anchor="middle" class="lbl" font-size="11.5">save user message</text>
+    <circle cx="350" cy="196" r="11" fill="#f4f6f4" stroke="#6f57d6" stroke-width="2"/><text x="350" y="200" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#6f57d6">3</text>
+  </g>
+  <!-- STEP 4: route to Claude (prompt cache) -->
+  <g class="step s4">
+    <line x1="350" y1="240" x2="796" y2="240" stroke="#0a86c0" stroke-width="2" marker-end="url(#b)"/>
+    <text x="575" y="232" text-anchor="middle" class="lbl" font-size="11.5">route: pick a view / write SQL</text>
+    <text x="575" y="256" text-anchor="middle" class="hsub mono" font-size="9.5">+ history · prompt cache: system + tools</text>
+    <circle cx="350" cy="240" r="11" fill="#f4f6f4" stroke="#0a86c0" stroke-width="2"/><text x="350" y="244" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#0a86c0">4</text>
+  </g>
+  <!-- STEP 5: proposes tool + SQL -->
+  <g class="step s5">
+    <line x1="800" y1="288" x2="354" y2="288" stroke="#0a86c0" stroke-width="2" marker-end="url(#b)"/>
+    <text x="575" y="280" text-anchor="middle" class="lbl" font-size="11.5">proposes tool + SQL</text>
+    <circle cx="800" cy="288" r="11" fill="#f4f6f4" stroke="#0a86c0" stroke-width="2"/><text x="800" y="292" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#0a86c0">5</text>
+  </g>
+  <!-- guardrails (self) -->
+  <g class="step s5">
+    <rect x="312" y="306" width="76" height="34" rx="8" fill="#eef5ec" stroke="#2f9e1e"/>
+    <circle cx="350" cy="323" r="11" fill="#f4f6f4" stroke="#2f9e1e" stroke-width="2"/><text x="350" y="327" text-anchor="middle" class="mono" font-size="10" font-weight="700" fill="#2f9e1e">✓</text>
+    <text x="402" y="320" class="lbl" font-size="11.5"><tspan fill="#2f9e1e" font-weight="700">Guardrails (in OUR backend)</tspan></text>
+    <text x="402" y="336" class="hsub mono" font-size="10">read-only? allowlisted view? row cap</text>
+  </g>
+  <!-- error: blocked -->
+  <line x1="346" y1="360" x2="104" y2="360" stroke="#d23b34" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#r)" opacity=".8"/>
+  <text x="223" y="354" text-anchor="middle" class="mono" font-size="10" fill="#d23b34">✗ if unsafe SQL → blocked, safe reply</text>
+
+  <!-- STEP 6: run SQL -->
+  <g class="step s6">
+    <line x1="350" y1="396" x2="1006" y2="396" stroke="#2f9e1e" stroke-width="2" marker-end="url(#g)"/>
+    <text x="680" y="388" text-anchor="middle" class="lbl" font-size="11.5">run read-only SQL · WebSocket :8563</text>
+    <circle cx="350" cy="396" r="11" fill="#f4f6f4" stroke="#2f9e1e" stroke-width="2"/><text x="350" y="400" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#2f9e1e">6</text>
+  </g>
+  <!-- error: asleep -->
+  <line x1="1006" y1="424" x2="354" y2="424" stroke="#d23b34" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#r)" opacity=".8"/>
+  <text x="680" y="418" text-anchor="middle" class="mono" font-size="10" fill="#d23b34">✗ if cluster asleep / down → retry, then “waking…” message</text>
+
+  <!-- STEP 7: rows -->
+  <g class="step s7">
+    <line x1="1010" y1="456" x2="354" y2="456" stroke="#8a948c" stroke-width="2" marker-end="url(#m)"/>
+    <text x="680" y="448" text-anchor="middle" class="lbl" font-size="11.5">rows (the result set)</text>
+    <circle cx="1010" cy="456" r="11" fill="#f4f6f4" stroke="#8a948c" stroke-width="2"/><text x="1010" y="460" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#2c3730">7</text>
+  </g>
+  <!-- STEP 8: narrate -->
+  <g class="step s8">
+    <line x1="350" y1="496" x2="796" y2="496" stroke="#0a86c0" stroke-width="2" marker-end="url(#b)"/>
+    <text x="575" y="488" text-anchor="middle" class="lbl" font-size="11.5">send the rows → narrate</text>
+    <circle cx="350" cy="496" r="11" fill="#f4f6f4" stroke="#0a86c0" stroke-width="2"/><text x="350" y="500" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#0a86c0">8</text>
+  </g>
+  <!-- STEP 9: stream answer -->
+  <g class="step s9">
+    <line x1="800" y1="536" x2="354" y2="536" stroke="#0a86c0" stroke-width="2" marker-end="url(#b)"/>
+    <text x="575" y="528" text-anchor="middle" class="lbl" font-size="11.5">stream answer (token by token)</text>
+    <circle cx="800" cy="536" r="11" fill="#f4f6f4" stroke="#0a86c0" stroke-width="2"/><text x="800" y="540" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#0a86c0">9</text>
+  </g>
+  <!-- STEP 10: save answer + cost -->
+  <g class="step s10">
+    <line x1="350" y1="576" x2="571" y2="576" stroke="#6f57d6" stroke-width="2" marker-end="url(#v)"/>
+    <text x="462" y="568" text-anchor="middle" class="lbl" font-size="11.5">save answer + tokens/cost</text>
+    <circle cx="350" cy="576" r="11" fill="#f4f6f4" stroke="#6f57d6" stroke-width="2"/><text x="350" y="580" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#6f57d6">10</text>
+  </g>
+  <!-- STEP 11: stream to client -->
+  <g class="step s11">
+    <line x1="346" y1="616" x2="104" y2="616" stroke="#2f9e1e" stroke-width="2" marker-end="url(#g)"/>
+    <text x="223" y="608" text-anchor="middle" class="lbl" font-size="11">stream answer + SQL + evidence + trace</text>
+    <circle cx="350" cy="616" r="11" fill="#f4f6f4" stroke="#2f9e1e" stroke-width="2"/><text x="350" y="620" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#2f9e1e">11</text>
+  </g>
+  <!-- STEP 12: render (self) -->
+  <g class="step s12">
+    <rect x="40" y="644" width="120" height="34" rx="8" fill="#eef5ec" stroke="#2f9e1e"/>
+    <circle cx="100" cy="661" r="11" fill="#f4f6f4" stroke="#2f9e1e" stroke-width="2"/><text x="100" y="665" text-anchor="middle" class="mono" font-size="11" font-weight="700" fill="#2f9e1e">12</text>
+    <text x="100" y="696" text-anchor="middle" class="lbl" font-size="11">render answer + glass-box</text>
+  </g>
+
+  <!-- legend -->
+  <line x1="48" y1="726" x2="78" y2="726" stroke="#2f9e1e" stroke-width="2" marker-end="url(#g)"/>
+  <text x="86" y="730" class="mono hsub" font-size="10">normal flow</text>
+  <line x1="196" y1="726" x2="226" y2="726" stroke="#d23b34" stroke-width="1.5" stroke-dasharray="4 4" marker-end="url(#r)"/>
+  <text x="234" y="730" class="mono hsub" font-size="10">error / fallback</text>
+  <line x1="356" y1="726" x2="386" y2="726" stroke="#6f57d6" stroke-width="2" marker-end="url(#v)"/>
+  <text x="394" y="730" class="mono hsub" font-size="10">data store (DynamoDB)</text>
+  <text x="568" y="730" class="mono hsub" font-size="10">Sign in via email-OTP (SES) or Try Demo → session cookie · Claude routes &amp; narrates · Exasol computes · answer streams · prompt caching on Claude</text>
+</svg>
