@@ -38,6 +38,16 @@ Every answer is grounded in live Exasol data, shows its SQL and rows, and offers
 
 ## Screenshots
 
+**A grounded answer with a chart** — narrated takeaways, a recommended action, and a chart drawn straight from the Exasol rows:
+
+![PlantPulse AI — grounded answer with a chart](docs/screenshots/answer-chart.png)
+
+**The assistant** (light and dark themes):
+
+![PlantPulse AI — home (light)](docs/screenshots/home-light.png)
+
+![PlantPulse AI — home (dark)](docs/screenshots/home-dark.png)
+
 **Prototype architecture (the request flow):**
 
 ![Prototype architecture](public/architecture-static.svg)
@@ -47,8 +57,6 @@ Every answer is grounded in live Exasol data, shows its SQL and rows, and offers
 ![Production architecture](public/architecture-production-static.svg)
 
 > Animated, self-explanatory versions (with assumptions) are on the live site: **https://plant.appili.dev/architecture**
-
-<!-- App screenshots (chat answer + chart, glass box, admin) to be added under docs/screenshots/ -->
 
 ---
 
