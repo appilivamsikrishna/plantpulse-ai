@@ -48,6 +48,8 @@ Every answer is grounded in live Exasol data, shows its SQL and rows, and offers
 
 ![PlantPulse AI — home (dark)](docs/screenshots/home-dark.png)
 
+**Sample PDF export** — any conversation exports to a branded report with the tables and charts rendered, a per-page footer, and pagination: **[docs/sample-conversation-report.pdf](docs/sample-conversation-report.pdf)**
+
 **Prototype architecture (the request flow):**
 
 ![Prototype architecture](public/architecture-static.svg)
